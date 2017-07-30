@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+            android:orientation="vertical" android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <TextView
+            style="@style/QuestionTextStyle"
+            android:text="@string/question_7" />
+
+        <TextView
+            style="@style/QuestionBodyTextStyle"
+            android:text="@string/question_7_body" />
+
+        <CheckBox
+            android:id="@+id/question71"
+            style="@style/QuestionOptionsTextStyle"
+            android:text="@string/question_7_OP1"
+            />
+        <CheckBox
+            android:id="@+id/question72"
+            style="@style/QuestionOptionsTextStyle"
+            android:text="@string/question_7_OP2"
+            />
+        <CheckBox
+            android:id="@+id/question73"
+            style="@style/QuestionOptionsTextStyle"
+            android:text="@string/question_7_OP3"
+            />
+        <CheckBox
+            android:id="@+id/question74"
+            style="@style/QuestionOptionsTextStyle"
+            android:text="@string/question_7_OP4"
+            />
+        <CheckBox
+            android:id="@+id/question75"
+            style="@style/QuestionOptionsTextStyle"
+            android:text="@string/question_7_OP5"
+            />
+
+    </LinearLayout>
+
+</layout>

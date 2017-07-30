@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            style="@style/QuestionTextStyle"
+            android:text="@string/question_3" />
+
+        <TextView
+            style="@style/QuestionBodyTextStyle"
+            android:text="@string/question_3_body" />
+
+        <RadioGroup
+            android:id="@+id/rgP3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                style="@style/QuestionOptionsTextStyle"
+                android:text="@string/question_3_OP1" />
+
+            <RadioButton
+                style="@style/QuestionOptionsTextStyle"
+                android:text="@string/question_3_OP2" />
+
+            <RadioButton
+                android:id="@+id/correct3"
+                style="@style/QuestionOptionsTextStyle"
+                android:text="@string/question_3_OP3" />
+
+            <RadioButton
+                style="@style/QuestionOptionsTextStyle"
+                android:text="@string/question_3_OP4" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+</layout>

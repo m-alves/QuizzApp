@@ -1,50 +1,30 @@
 package com.example.android.quizapp;
 
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
-import android.widget.CheckBox;
-import android.widget.EditText;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.Toast;
+
+import com.example.android.quizapp.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
     /*
-    * Declare the several Views that will be used in various methods
+    * Declare the several bindings that will be used in various methods
     */
-    private RadioGroup mQ1;
-    private RadioGroup mQ2;
-    private RadioGroup mQ3;
-    private RadioGroup mQ4;
-    private RadioGroup mQ5;
-    private RadioGroup mQ6;
-    private CheckBox mQ71;
-    private CheckBox mQ72;
-    private CheckBox mQ73;
-    private CheckBox mQ74;
-    private CheckBox mQ75;
-    private EditText mQ8;
+
+    ActivityMainBinding binding;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
-        mQ1 = (RadioGroup) findViewById(R.id.RG_P1);
-        mQ2 = (RadioGroup) findViewById(R.id.RG_P2);
-        mQ3 = (RadioGroup) findViewById(R.id.RG_P3);
-        mQ4 = (RadioGroup) findViewById(R.id.RG_P4);
-        mQ5 = (RadioGroup) findViewById(R.id.RG_P5);
-        mQ6 = (RadioGroup) findViewById(R.id.RG_P6);
-        mQ71 = (CheckBox) findViewById(R.id.correct71);
-        mQ72 = (CheckBox) findViewById(R.id.incorrect72);
-        mQ73 = (CheckBox) findViewById(R.id.correct73);
-        mQ74 = (CheckBox) findViewById(R.id.incorrect74);
-        mQ75 = (CheckBox) findViewById(R.id.correct75);
-        mQ8 = (EditText) findViewById(R.id.question_8);
     }
 
     /**
@@ -86,12 +66,13 @@ public class MainActivity extends AppCompatActivity {
     * @return true if all the rediogroups are checked
     */
     public boolean checkCompletedRadiogroups(){
-        if(mQ1.getCheckedRadioButtonId() != -1 &&
-                mQ2.getCheckedRadioButtonId() != -1 &&
-                mQ3.getCheckedRadioButtonId() != -1 &&
-                mQ4.getCheckedRadioButtonId() != -1 &&
-                mQ5.getCheckedRadioButtonId() != -1 &&
-                mQ6.getCheckedRadioButtonId() != -1) {
+
+        if(binding.question1.rgP1.getCheckedRadioButtonId() != -1 &&
+                binding.question2.rgP2.getCheckedRadioButtonId() != -1 &&
+                binding.question3.rgP3.getCheckedRadioButtonId() != -1 &&
+                binding.question4.rgP4.getCheckedRadioButtonId() != -1 &&
+                binding.question5.rgP5.getCheckedRadioButtonId() != -1 &&
+                binding.question6.rgP6.getCheckedRadioButtonId() != -1) {
             return true;
         }else{
             return false;
@@ -103,9 +84,9 @@ public class MainActivity extends AppCompatActivity {
     * @return true if at least one checkbox for question is checked
     */
     public boolean checkCompletedCheckBoxes(){
-        if(mQ71.isChecked() || mQ72.isChecked() ||
-                mQ73.isChecked() || mQ74.isChecked() ||
-                mQ75.isChecked()){
+        if(binding.question7.question71.isChecked() || binding.question7.question72.isChecked() ||
+                binding.question7.question73.isChecked() || binding.question7.question74.isChecked() ||
+                binding.question7.question75.isChecked()){
             return true;
         } else {
             return false;
@@ -117,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
    * @return true if some there has been text input
    */
     public boolean checkCompletedEditBoxes(){
-        String q8Answer = mQ8.getText().toString();
+        String q8Answer = binding.question8.question8.getText().toString();
         if(!TextUtils.isEmpty(q8Answer)){
             return true;
         } else{
@@ -132,36 +113,35 @@ public class MainActivity extends AppCompatActivity {
     public int checkAnswers(){
         int countCorrectAnswers = 0;
 
-        RadioButton correctRadioButton1 = (RadioButton)findViewById(R.id.correct1);
-        if(correctRadioButton1.isChecked()){
-            countCorrectAnswers += 1;
-        }
-        RadioButton correctRadioButton2 = (RadioButton)findViewById(R.id.correct2);
-        if(correctRadioButton2.isChecked()){
-            countCorrectAnswers += 1;
-        }
-        RadioButton correctRadioButton3 = (RadioButton)findViewById(R.id.correct3);
-        if(correctRadioButton3.isChecked()){
-            countCorrectAnswers += 1;
-        }
-        RadioButton correctRadioButton4 = (RadioButton)findViewById(R.id.correct4);
-        if(correctRadioButton4.isChecked()){
-            countCorrectAnswers += 1;
-        }
-        RadioButton correctRadioButton5 = (RadioButton)findViewById(R.id.correct5);
-        if(correctRadioButton5.isChecked()){
-            countCorrectAnswers += 1;
-        }
-        RadioButton correctRadioButton6 = (RadioButton)findViewById(R.id.correct6);
-        if(correctRadioButton6.isChecked()){
+        if(binding.question1.correct1.isChecked()){
             countCorrectAnswers += 1;
         }
 
-        if(mQ71.isChecked() && mQ73.isChecked() && mQ75.isChecked() ){
+        if(binding.question2.correct2.isChecked()){
+            countCorrectAnswers += 1;
+        }
+
+        if(binding.question3.correct3.isChecked()){
+            countCorrectAnswers += 1;
+        }
+
+        if(binding.question4.correct4.isChecked()){
+            countCorrectAnswers += 1;
+        }
+
+        if(binding.question5.correct5.isChecked()){
+            countCorrectAnswers += 1;
+        }
+
+        if(binding.question6.correct6.isChecked()){
+            countCorrectAnswers += 1;
+        }
+
+        if(binding.question7.question71.isChecked() && binding.question7.question73.isChecked() && binding.question7.question75.isChecked() ){
             countCorrectAnswers +=1;
         }
 
-        String q8Answer = mQ8.getText().toString();
+        String q8Answer = binding.question8.question8.getText().toString();
         if(q8Answer.equals("5")){
             countCorrectAnswers +=1;
         }
@@ -173,17 +153,17 @@ public class MainActivity extends AppCompatActivity {
      * @param view - the Reset Button
      */
     public void resetAnswers(View view){
-        mQ1.clearCheck();
-        mQ2.clearCheck();
-        mQ3.clearCheck();
-        mQ4.clearCheck();
-        mQ5.clearCheck();
-        mQ6.clearCheck();
-        mQ71.setChecked(false);
-        mQ72.setChecked(false);
-        mQ73.setChecked(false);
-        mQ74.setChecked(false);
-        mQ75.setChecked(false);
-        mQ8.setText("");
+        binding.question1.rgP1.clearCheck();
+        binding.question2.rgP2.clearCheck();
+        binding.question3.rgP3.clearCheck();
+        binding.question4.rgP4.clearCheck();
+        binding.question5.rgP5.clearCheck();
+        binding.question6.rgP6.clearCheck();
+        binding.question7.question71.setChecked(false);
+        binding.question7.question72.setChecked(false);
+        binding.question7.question73.setChecked(false);
+        binding.question7.question74.setChecked(false);
+        binding.question7.question75.setChecked(false);
+        binding.question8.question8.setText("");
     }
 }
