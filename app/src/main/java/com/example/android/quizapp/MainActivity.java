@@ -137,7 +137,9 @@ public class MainActivity extends AppCompatActivity {
             countCorrectAnswers += 1;
         }
 
-        if(binding.question7.question71.isChecked() && binding.question7.question73.isChecked() && binding.question7.question75.isChecked() ){
+        if(binding.question7.question71.isChecked() && binding.question7.question73.isChecked() &&
+                binding.question7.question75.isChecked() && !binding.question7.question72.isChecked() &&
+                !binding.question7.question74.isChecked()){
             countCorrectAnswers +=1;
         }
 
