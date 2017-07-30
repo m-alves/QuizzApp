@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">QuizApp</string>
+    <string name="intro">Test your knowledge about Sport Lisboa e Benfica!</string>
+    <string name="intro_2">Choose the right answers to the following questions:</string>
+    <string name="question_1">Question 1</string>
+    <string name="question_2">Question 2</string>
+    <string name="question_3">Question 3</string>
+    <string name="question_4">Question 4</string>
+    <string name="question_5">Question 5</string>
+    <string name="question_6">Question 6</string>
+    <string name="question_7">Question 7</string>
+    <string name="question_8">Question 8</string>
+    <string name="question_1_body">Who is the best scorer in the history of Sport Lisboa e Benfica?</string>
+    <string name="question_2_body">Who is the best foreign scorer in the history of Sport Lisboa e Benfica?</string>
+    <string name="question_3_body">How many times did Sport Lisboa e Benfica won three championships in a row?</string>
+    <string name="question_4_body">Who is the player with more games for Sport Lisboa e Benfica?</string>
+    <string name="question_5_body">Who is the manager with more wins for Sport Lisboa e Benfica?</string>
+    <string name="question_6_body">Who is the manager with more games for Sport Lisboa e Benfica?</string>
+    <string name="question_7_body">In which decades did Sport Lisboa and Benfica won three championships in a row?</string>
+    <string name="question_8_body">How many goals did Sport Lisboa e Benfica scored in the last home game of 2016/2017 season?</string>
+    <string name="question_1_OP1">Eusébio</string>
+    <string name="question_1_OP2">Nené</string>
+    <string name="question_1_OP3">César Brito</string>
+    <string name="question_1_OP4">Nuno Gomes</string>
+    <string name="question_2_OP1">Jonas</string>
+    <string name="question_2_OP2">Oscar Cardozo</string>
+    <string name="question_2_OP3">Martin Pringle</string>
+    <string name="question_2_OP4">Mats Magnusson</string>
+    <string name="question_3_OP1">3</string>
+    <string name="question_3_OP2">5</string>
+    <string name="question_3_OP3">6</string>
+    <string name="question_3_OP4">4</string>
+    <string name="question_4_OP1">Veloso</string>
+    <string name="question_4_OP2">Coluna</string>
+    <string name="question_4_OP3">Luisão</string>
+    <string name="question_4_OP4">Nené</string>
+    <string name="question_5_OP1">Jorge Jesus</string>
+    <string name="question_5_OP2">Sven-Göran Eriksson</string>
+    <string name="question_5_OP3">Otto Glória</string>
+    <string name="question_5_OP4">János Biri</string>
+    <string name="question_6_OP1">Otto Glória</string>
+    <string name="question_6_OP2">Jorge Jesus</string>
+    <string name="question_6_OP3">Béla Guttmann</string>
+    <string name="question_6_OP4">Sven-Göran Eriksson</string>
+    <string name="question_7_OP1">30\'s</string>
+    <string name="question_7_OP2">50\'s</string>
+    <string name="question_7_OP3">60\'s</string>
+    <string name="question_7_OP4">80\'s</string>
+    <string name="question_7_OP5">70\'s</string>
+    <string name="Submit">Submit</string>
+    <string name="Reset">Reset</string>
+    <string name="incomplete_quiz">Please answer all the questions.</string>
+    <string name="complete_quiz_total">Congratulations! All your answers are correct!</string>
+    <string name="complete_partial">You gave %d correct answers in 8 questions.</string>
+
+
+
+</resources>
